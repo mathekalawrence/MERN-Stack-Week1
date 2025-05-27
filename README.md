@@ -1,15 +1,37 @@
-# MongoDB Fundamentals Assignment
+# MongoDB Fundamentals - Week 1
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+## Setup Instructions
+
+Before you begin this assignment, please make sure you have the following installed:
+
+1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
+2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
+3. **Node.js** - [Download here](https://nodejs.org/)
+
+### Node.js Package Setup
+
+Once you have Node.js installed, run the following commands in your assignment directory:
+
+```bash
+# Initialize a package.json file
+npm init -y
+
+# Install the MongoDB Node.js driver
+npm install mongodb
+```
 
 ## Assignment Overview
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+This week focuses on MongoDB fundamentals including:
+- Creating and connecting to MongoDB databases
+- CRUD operations (Create, Read, Update, Delete)
+- MongoDB queries and filters
+- Aggregation pipelines
+- Indexing for performance
+
+## Submission
+
+Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
 
 ## Getting Started
 
@@ -29,15 +51,6 @@ You will:
 - Node.js (v18 or higher)
 - MongoDB (local installation or Atlas account)
 - MongoDB Shell (mongosh) or MongoDB Compass
-
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
 
 ## Resources
 
