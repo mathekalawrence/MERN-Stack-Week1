@@ -1,43 +1,41 @@
 // queries.js - MongoDB CRUD, Advanced Queries, Aggregations, and Indexing
-// Run these in MongoDB shell (mongosh) or include them in your app scripts.
 
 //BASIC CRUD OPERATIONS
-
 
 // Find all books in a specific genre
 db.books.find({ genre: "Fiction" });
 
-// Find books published after a certain year (e.g., after 2000)
+// Finding books published after a certain year 
 db.books.find({ published_year: { $gt: 2000 } });
 
-// Find books by a specific author
+// Finding books by a specific author
 db.books.find({ author: "George Orwell" });
 
-// Update the price of a specific book
+// Updating the price of a specific book
 db.books.updateOne(
   { title: "The Alchemist" },
   { $set: { price: 15.99 } }
 );
 
-// Delete a book by its title
+// Deleting a book by its title
 db.books.deleteOne({ title: "Moby Dick" });
 
 
-// -------------------- ADVANCED QUERIES --------------------
+// ADVANCED QUERIES
 
-// Find books that are both in stock and published after 2010
+// Finding books that are both in stock and published after 2010
 db.books.find({
   in_stock: true,
   published_year: { $gt: 2010 }
 });
 
-// Projection: return only title, author, and price
+// Projection: returning only title, author, and price
 db.books.find({}, { _id: 0, title: 1, author: 1, price: 1 });
 
-// Sort books by price ascending
+// Sorting books by price ascending
 db.books.find().sort({ price: 1 });
 
-// Sort books by price descending
+// Sorting books by price descending
 db.books.find().sort({ price: -1 });
 
 // Pagination: limit and skip (5 per page)
@@ -45,7 +43,7 @@ db.books.find().limit(5).skip(0); // Page 1
 db.books.find().limit(5).skip(5); // Page 2
 
 
-// -------------------- AGGREGATION PIPELINES --------------------
+//  AGGREGATION PIPELINES 
 
 // 1. Average price of books by genre
 db.books.aggregate([
@@ -70,7 +68,7 @@ db.books.aggregate([
   { $limit: 1 }
 ]);
 
-// 3. Group books by publication decade and count them
+// 3. Grouping books by publication decade and count them
 db.books.aggregate([
   {
     $group: {
@@ -89,13 +87,12 @@ db.books.aggregate([
 ]);
 
 
-// -------------------- INDEXING --------------------
-
-// Create index on title
+// INDEXING 
+// Creating index on title
 db.books.createIndex({ title: 1 });
 
-// Create compound index on author and published_year
+// Creating compound index on author and published_year
 db.books.createIndex({ author: 1, published_year: -1 });
 
-// Use explain() to demonstrate performance improvement
+// Using explain() to demonstrate performance improvement
 db.books.find({ title: "1984" }).explain("executionStats");

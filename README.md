@@ -57,3 +57,27 @@ Complete all the exercises in this assignment and push your code to GitHub using
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [MongoDB University](https://university.mongodb.com/)
 - [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+
+
+# PLP MongoDB Week 1 Assignment
+
+## Overview
+This project demonstrates MongoDB fundamentals, including:
+- Database and collection setup
+- CRUD operations
+- Advanced filtering, projection, and sorting
+- Aggregation pipelines
+- Index creation and performance analysis
+
+
+
+## Setup Instructions
+
+### 1️. Install MongoDB
+- Downloading MongoDB Community Edition or create a free MongoDB Atlas cluster.
+- Starting the MongoDB service locally or connecting to the Atlas URI.
+
+### 2️. Run the `insert_books.js` Script
+Populating the database with sample data:
+```bash
+node insert_books.js
