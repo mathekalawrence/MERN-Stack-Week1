@@ -46,7 +46,7 @@ db.books.find().limit(5).skip(5); // Page 2
 //  AGGREGATION PIPELINES 
 
 // 1. Average price of books by genre
-db.books.aggregate([
+db.books.aggregate([ 
   {
     $group: {
       _id: "$genre",
