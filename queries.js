@@ -9,7 +9,7 @@ db.books.find({ genre: "Fiction" });
 db.books.find({ published_year: { $gt: 2000 } });
 
 // Finding books by a specific author
-db.books.find({ author: "George Orwell" });
+db.books.find({ author: "George Orwell" }); 
 
 // Updating the price of a specific book
 db.books.updateOne(
