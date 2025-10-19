@@ -56,7 +56,7 @@ db.books.aggregate([
   }
 ]);
 
-// 2. Author with the most books
+// 2. Author with the most books 
 db.books.aggregate([
   {
     $group: {
